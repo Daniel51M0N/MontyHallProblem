@@ -7,11 +7,11 @@ class MontyHallProblem {
     for (int i = repetitions; i > 0; i--) {
       int correctDoor = (int) (Math.random() * numDoors);
 
-      //System.out.println("The random correct door has now been chosen out of the " + numDoors + " options. It is door number " + correctDoor + ".\n");
+      System.out.println("The random correct door has now been chosen out of the " + numDoors + " options. It is door number " + correctDoor + ".\n");
 
       int chosenDoor = (int) (Math.random() * numDoors);
 
-      //System.out.println("Now, " + (numDoors - 1) + " doors have been removed from play. The remaining doors are:");
+      System.out.println("Now, " + (numDoors - 2) + " doors have been removed from play. The remaining doors are:");
 
       if (chosenDoor == correctDoor) {
         int otherDoor;
@@ -19,10 +19,10 @@ class MontyHallProblem {
           otherDoor = (int) (Math.random() * numDoors);
         } while (otherDoor != chosenDoor);
 
-        //System.out.println("Chosen door: #" + chosenDoor + " (correct)\n" + "Other door: #" + otherDoor + " (incorrect)");
+        System.out.println("Chosen door: #" + chosenDoor + " (correct)\n" + "Other door: #" + otherDoor + " (incorrect)");
         System.out.println("They should NOT have switched doors!");
       } else {
-        //System.out.println("Chosen door: #" + chosenDoor + " (incorrect)\n" + "Other door: #" + correctDoor + " (correct)");
+        System.out.println("Chosen door: #" + chosenDoor + " (incorrect)\n" + "Other door: #" + correctDoor + " (correct)");
         System.out.println("They SHOULD have switched doors!");
         wouldHaveWon++;
       }
